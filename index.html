@@ -290,11 +290,13 @@
           AuroraLeadCapture.setupCtas("#lcaiTest");
           //returns contact object
           const contactCallback = (contact) => {
+          gtag('event', 'contact_received');
           console.log(contact);
         };
           AuroraLeadCapture.addEventListener('contact', contactCallback);
             //returns results object
             const resultsCallback = (results) => {
+            gtag('event', 'results_displayed');
             console.log(results);
         };
           AuroraLeadCapture.addEventListener('results', resultsCallback);
